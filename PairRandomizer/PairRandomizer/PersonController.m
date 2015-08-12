@@ -12,6 +12,7 @@
 @interface PersonController()
 
 @property (nonatomic, strong) NSArray *people;
+@property (nonatomic, strong) NSArray *randomPeople;
 
 @end
 
@@ -22,6 +23,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [PersonController new];
+        
     });
    
     return sharedInstance;
@@ -60,18 +62,32 @@
     
 }
 
+#pragma mark- Delete 
+
+- (void)removePerson:(Person *)person{
+    
+    [[Stack sharedInstance].managedObjectContext deleteObject:person];
+    
+}
+
 #pragma mark - Randomize Pairs
 
-- (NSArray *)createRandomPairsFromArray:(NSArray *)array{
+- (void)randomizeArray{
     
-    NSMutableArray *randomPeople = [NSMutableArray arrayWithCapacity:array.count];
+    NSMutableArray *randomPeople = [NSMutableArray new];
+    
+    [randomPeople addObject:self.people[0]];
 
-    for (int i = 0; i < array.count; i++) {
-        [randomPeople insertObject:array[i] atIndex:arc4random_uniform(array.count)];
+    for (int i = 1; i < self.people.count; i++) {
+        [randomPeople insertObject:self.people[i] atIndex:arc4random_uniform(i+1)];
+        
     }
-    NSLog(@"%@", randomPeople);
-    NSArray *returnArray = randomPeople;
-    return returnArray;
+    for (int i = 0; i < randomPeople.count; i++) {
+        Person *person = randomPeople[i];
+        NSLog(@"NAME:%@", person.name);
+    }
+    
+    self.randomPeople = randomPeople;
 
   
 }

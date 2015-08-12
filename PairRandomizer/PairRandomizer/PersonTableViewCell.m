@@ -32,6 +32,7 @@
     [textField resignFirstResponder];
     [self.delegate nameEntered:self.nameTextField.text inSender:self];
     
+    
     return YES;
 }
 

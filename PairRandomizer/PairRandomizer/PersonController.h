@@ -31,6 +31,8 @@
 
 #pragma mark- Randomize Pairs
 
-- (NSArray *)createRandomPairsFromArray:(NSArray *)array;
+- (void)randomizeArray;
+
+@property (nonatomic, strong, readonly) NSArray *randomPeople;
 
 @end

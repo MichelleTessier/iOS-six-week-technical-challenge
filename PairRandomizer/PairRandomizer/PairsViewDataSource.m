@@ -10,11 +10,8 @@
 #import "PersonController.h"
 
 static NSString *pairsCell = @"pairsCell";
-typedef NS_ENUM(NSUInteger, cellTypeOptions) {
-    cellTypeOptionPairTitle,
-    cellTypeOptionMember1,
-    cellTypeOptionMember2,
-};
+
+
 
 @implementation PairsViewDataSource
 
@@ -28,12 +25,16 @@ typedef NS_ENUM(NSUInteger, cellTypeOptions) {
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:pairsCell forIndexPath:indexPath];
-UITableView
+
     
+    NSArray *randomPeople = [PersonController sharedInstance].randomPeople;
     
-    NSArray *people = [PersonController sharedInstance].people;
+    Person *person = randomPeople[indexPath.section + indexPath.row + indexPath.section];
+   
     NSLog(@"%li",indexPath.row);
-    Person *person = people[indexPath.row];
+    NSLog(@"%li", indexPath.section);
+    NSLog(@"Next");
+    
     
     cell.textLabel.text = person.name;
     return cell;

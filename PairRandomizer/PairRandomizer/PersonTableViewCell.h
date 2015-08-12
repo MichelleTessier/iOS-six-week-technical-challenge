@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Person.h"
 
 @protocol PersonTableViewCellDelegate;
 
@@ -15,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (nonatomic, weak) id <PersonTableViewCellDelegate> delegate;
+@property (weak, nonatomic) Person *person;
 
 
 @end

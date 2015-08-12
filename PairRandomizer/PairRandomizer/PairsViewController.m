@@ -21,6 +21,12 @@
     self.view.backgroundColor = [UIColor purpleColor];
    }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[PersonController sharedInstance] randomizeArray];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
