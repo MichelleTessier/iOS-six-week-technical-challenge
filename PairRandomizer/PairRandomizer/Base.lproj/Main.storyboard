@@ -21,54 +21,48 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="pB1-qj-GzE" customClass="PersonTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellID" id="VUz-yY-cWW" customClass="PersonTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pB1-qj-GzE" id="OF7-Ow-UFo">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VUz-yY-cWW" id="U9s-9p-qoM">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Qh-kA-DCH">
-                                                    <rect key="frame" x="8" y="7" width="403" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="CAC-c8-liK"/>
-                                                        <constraint firstAttribute="width" constant="403" id="QKq-r9-oq9"/>
-                                                    </constraints>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ag-5c-mId">
+                                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2Qh-kA-DCH" firstAttribute="top" secondItem="OF7-Ow-UFo" secondAttribute="topMargin" constant="-1" id="8uH-H1-iIp"/>
-                                                <constraint firstItem="2Qh-kA-DCH" firstAttribute="leading" secondItem="OF7-Ow-UFo" secondAttribute="leadingMargin" id="W0K-cY-aAd"/>
+                                                <constraint firstItem="6ag-5c-mId" firstAttribute="leading" secondItem="U9s-9p-qoM" secondAttribute="leadingMargin" id="38M-Qq-6u1"/>
+                                                <constraint firstItem="6ag-5c-mId" firstAttribute="top" secondItem="U9s-9p-qoM" secondAttribute="topMargin" id="AUY-00-Atb"/>
+                                                <constraint firstItem="6ag-5c-mId" firstAttribute="trailing" secondItem="U9s-9p-qoM" secondAttribute="trailingMargin" id="W0e-es-j4Y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6ag-5c-mId" secondAttribute="bottom" constant="-3" id="mW8-dB-uvV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nameTextField" destination="2Qh-kA-DCH" id="RrR-4f-XEM"/>
+                                            <outlet property="nameTextField" destination="6ag-5c-mId" id="XSd-Bt-VEj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="TIl-nh-r0H" id="cXG-mC-f6W"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="tLI-80-ixT"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7jZ-hd-09D" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="K3P-Pc-CwY"/>
-                            <constraint firstItem="7jZ-hd-09D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="adQ-lf-f97"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7jZ-hd-09D" secondAttribute="trailing" constant="-16" id="dpy-JK-LR2"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7jZ-hd-09D" secondAttribute="bottom" id="w08-53-5BT"/>
+                            <constraint firstItem="7jZ-hd-09D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="4qG-Xl-esn"/>
+                            <constraint firstItem="7jZ-hd-09D" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="FPf-GM-tVT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7jZ-hd-09D" secondAttribute="trailing" constant="-16" id="bc3-6k-8Dk"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="7jZ-hd-09D" secondAttribute="bottom" id="oyt-eF-czU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cmn-r7-ghz">
-                        <barButtonItem key="rightBarButtonItem" title="Randomize!" id="jjG-Yo-Fbi">
-                            <connections>
-                                <segue destination="28j-FL-AtL" kind="show" id="jTc-er-iDI"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="cmn-r7-ghz"/>
                     <connections>
                         <outlet property="tableView" destination="7jZ-hd-09D" id="OcR-gL-VAb"/>
+                        <segue destination="28j-FL-AtL" kind="show" identifier="shakeSegue" id="6wb-I5-PZS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -117,6 +111,9 @@
                             <constraint firstItem="Q2d-5W-90j" firstAttribute="bottom" secondItem="pC3-Nu-MKt" secondAttribute="top" id="e8l-5O-zWZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Q2d-5W-90j" id="VDz-ej-5EU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aD1-ja-4iy" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="dnI-jf-rrb" customClass="PairsViewDataSource"/>

@@ -10,7 +10,7 @@
 #import "PersonTableViewCell.h"
 
 
-@interface MasterListViewController () 
+@interface MasterListViewController () <UITableViewDelegate>
 
 @end
 
@@ -29,6 +29,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (event.type == UIEventSubtypeMotionShake) {
+        [self performSegueWithIdentifier:@"shakeSegue" sender:self];
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == ([PersonController sharedInstance].people.count)) {
+        return UITableViewCellEditingStyleNone;
+    }else{
+        return UITableViewCellEditingStyleDelete;
+    }
 }
 
 

@@ -26,6 +26,12 @@
     [[PersonController sharedInstance] randomizeArray];
 }
 
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if (event.type == UIEventSubtypeMotionShake) {
+       [[PersonController sharedInstance] randomizeArray];
+        [self.tableView reloadData];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

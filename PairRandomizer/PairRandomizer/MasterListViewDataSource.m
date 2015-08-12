@@ -10,6 +10,7 @@
 #import "PersonController.h"
 #import "PersonTableViewCell.h"
 
+
 static NSString *cellID = @"cellID";
 
 @implementation MasterListViewDataSource
@@ -44,11 +45,12 @@ static NSString *cellID = @"cellID";
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-        Person *person = [PersonController sharedInstance].people[indexPath.row];
-        [[PersonController sharedInstance] removePerson:person];
-        [[PersonController sharedInstance] save];
+ 
+            Person *person = [PersonController sharedInstance].people[indexPath.row];
+            [[PersonController sharedInstance] removePerson:person];
+            [[PersonController sharedInstance] save];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:YES];
+        
       
     }
     
