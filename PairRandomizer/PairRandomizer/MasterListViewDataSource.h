@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "PersonTableViewCell.h"
 
-@interface MasterListViewDataSource : NSObject <UITableViewDataSource>
+@interface MasterListViewDataSource : NSObject <UITableViewDataSource, PersonTableViewCellDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "MasterListViewController.h"
+#import "PersonTableViewCell.h"
 
-@interface MasterListViewController ()
+@interface MasterListViewController () 
 
 @end
 
@@ -17,11 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"Pair Randomizer!";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
+
+
 
 @end

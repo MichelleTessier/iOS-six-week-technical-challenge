@@ -20,6 +20,9 @@
 		2CC3490F1B7BA20A006A8D5E /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC3490E1B7BA20A006A8D5E /* Stack.m */; };
 		2CC349121B7BA30C006A8D5E /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC349111B7BA30C006A8D5E /* Person.m */; };
 		2CC349161B7BA35D006A8D5E /* PersonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC349151B7BA35D006A8D5E /* PersonController.m */; };
+		2CC349191B7BA842006A8D5E /* PersonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC349181B7BA842006A8D5E /* PersonTableViewCell.m */; };
+		2CC3491C1B7BB808006A8D5E /* PairsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC3491B1B7BB808006A8D5E /* PairsViewController.m */; };
+		2CC3491F1B7BBE79006A8D5E /* PairsViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC3491E1B7BBE79006A8D5E /* PairsViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,12 @@
 		2CC349111B7BA30C006A8D5E /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		2CC349141B7BA35D006A8D5E /* PersonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonController.h; sourceTree = "<group>"; };
 		2CC349151B7BA35D006A8D5E /* PersonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonController.m; sourceTree = "<group>"; };
+		2CC349171B7BA842006A8D5E /* PersonTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonTableViewCell.h; sourceTree = "<group>"; };
+		2CC349181B7BA842006A8D5E /* PersonTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonTableViewCell.m; sourceTree = "<group>"; };
+		2CC3491A1B7BB808006A8D5E /* PairsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsViewController.h; sourceTree = "<group>"; };
+		2CC3491B1B7BB808006A8D5E /* PairsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairsViewController.m; sourceTree = "<group>"; };
+		2CC3491D1B7BBE79006A8D5E /* PairsViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PairsViewDataSource.h; sourceTree = "<group>"; };
+		2CC3491E1B7BBE79006A8D5E /* PairsViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PairsViewDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,12 @@
 				2CC348E41B7B9C27006A8D5E /* MasterListViewController.m */,
 				2CC349021B7B9E3C006A8D5E /* MasterListViewDataSource.h */,
 				2CC349031B7B9E3C006A8D5E /* MasterListViewDataSource.m */,
+				2CC349171B7BA842006A8D5E /* PersonTableViewCell.h */,
+				2CC349181B7BA842006A8D5E /* PersonTableViewCell.m */,
+				2CC3491A1B7BB808006A8D5E /* PairsViewController.h */,
+				2CC3491B1B7BB808006A8D5E /* PairsViewController.m */,
+				2CC3491D1B7BBE79006A8D5E /* PairsViewDataSource.h */,
+				2CC3491E1B7BBE79006A8D5E /* PairsViewDataSource.m */,
 				2CC349131B7BA346006A8D5E /* Model Controllers */,
 				2CC3490A1B7BA1A8006A8D5E /* Model */,
 				2CC348E61B7B9C27006A8D5E /* Main.storyboard */,
@@ -264,6 +279,9 @@
 			files = (
 				2CC349161B7BA35D006A8D5E /* PersonController.m in Sources */,
 				2CC3490F1B7BA20A006A8D5E /* Stack.m in Sources */,
+				2CC3491F1B7BBE79006A8D5E /* PairsViewDataSource.m in Sources */,
+				2CC3491C1B7BB808006A8D5E /* PairsViewController.m in Sources */,
+				2CC349191B7BA842006A8D5E /* PersonTableViewCell.m in Sources */,
 				2CC348E51B7B9C27006A8D5E /* MasterListViewController.m in Sources */,
 				2CC349121B7BA30C006A8D5E /* Person.m in Sources */,
 				2CC348E21B7B9C27006A8D5E /* AppDelegate.m in Sources */,
